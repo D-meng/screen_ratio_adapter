@@ -7,6 +7,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter_boost/flutter_boost.dart';
 import 'package:screen_ratio_adapter/src/ui_blueprints_rectangle.dart';
 import 'dart:collection';
 import 'dart:ui' as ui show window, PointerDataPacket;
@@ -75,7 +76,8 @@ TransitionBuilder FxTransitionBuilder({TransitionBuilder? builder}) {
   };
 }
 
-class FxWidgetsFlutterBinding extends WidgetsFlutterBinding {
+class FxWidgetsFlutterBinding extends WidgetsFlutterBinding
+    with BoostFlutterBinding {
   static WidgetsBinding ensureInitialized(
       {required BlueprintsRectangle uiBlueprints, bool enableLog = false}) {
     assert(uiBlueprints.width > 0);
