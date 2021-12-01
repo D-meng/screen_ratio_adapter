@@ -238,7 +238,6 @@ class FxWidgetsFlutterBinding extends WidgetsFlutterBinding {
     if (hitTestResult != null ||
         event is PointerAddedEvent ||
         event is PointerRemovedEvent) {
-      assert(event.position != null);
       dispatchEvent(event, hitTestResult);
     }
   }
@@ -282,8 +281,6 @@ class _RoorRenderObjectWidget extends SingleChildRenderObjectWidget {
   }
 }
 
-///now  flutter --version 2.3.0-0.1.pre
-const Duration _defaultSamplingOffset = Duration(milliseconds: -38);
 const Duration _samplingInterval = Duration(microseconds: 16667);
 
 typedef _HandleSampleTimeChangedCallback = void Function();

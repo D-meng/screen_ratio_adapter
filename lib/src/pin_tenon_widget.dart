@@ -32,7 +32,6 @@ class _PinTenonWidgetState extends State<PinTenonWidget>
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     if (Info.instance.deltaLength <= 0)
       return SizedBox.fromSize(size: Size.zero);
     Widget result = const SizedBox();
